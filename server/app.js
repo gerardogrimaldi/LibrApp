@@ -1,12 +1,9 @@
 var everyauth = require('everyauth');
-var express = require('express');
-var routes = require('./routes');
-var user = require('./routes/user');
-var mongoose = require('mongoose');
-var http = require('http');
-var path = require('path');
-
-mongoose.connect('mongodb://librapp:%#L1br4pp#%@ds047198.mongolab.com:47198/librapp');
+var express = 	require('express');
+var routes = 	require('./routes');
+var user = 		require('./routes/user/user.js');
+var http = 		require('http');
+var path = 		require('path');
 
 var app = express();
 
@@ -27,9 +24,11 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
-app.get('/user', user.index);
+app.get('/api', routes.index);
+app.get('/api/user', user.index);
+app.post('/api/user/create', user.create);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+//http://www.codemag.com/Article/1210041

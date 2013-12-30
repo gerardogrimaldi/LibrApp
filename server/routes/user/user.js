@@ -1,5 +1,4 @@
-var User = require('../models/user').User; 
-
+var User = require('../../models/user').User; 
 /*
  * Users Routes
  */

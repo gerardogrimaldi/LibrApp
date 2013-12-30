@@ -14,7 +14,7 @@
         <!-- build:css({.tmp,app}) styles/main.css -->
         <!--link rel="stylesheet" href="styles/main.css"-->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-        <link href="bower_components/bootstrap/dist/css/navbar.css" rel="stylesheet">
+        <link href="styles/navbar.css" rel="stylesheet">
         <!-- endbuild -->
 </head>
   <body ng-app="LibrApp">
@@ -51,14 +51,13 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+
     <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/login.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="bower_components/oauth/oauth.js"></script>
-    
-    <script>
-      OAuth.initialize('n1PGKz9WU_Ba0Ff2mBqt0SLVvNo');
-    </script>
+    <script src="scripts/controllers/user/index.js"></script>
+    <script src="scripts/controllers/user/create.js"></script>
+
+
+    <script src="http://code.jquery.com/jquery-1.11.0-beta3.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- endbuild -->
 </body>
