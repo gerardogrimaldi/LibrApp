@@ -2,7 +2,7 @@
 
 angular.module('LibrApp').controller('UserCreateCtrl', function ($scope, $http) {
 
-	$http({method: 'POST', url: 'api/user/crete/'}).
+	$http({method: 'POST', url: 'http://127.0.0.1:3000/api/user/crete/'}).
 		success(function(data, status, headers, config) {
 		// this callback will be called asynchronously
 		// when the response is available

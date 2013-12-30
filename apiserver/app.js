@@ -1,9 +1,9 @@
 var everyauth = require('everyauth');
-var express = 	require('express');
-var routes = 	require('./routes');
-var user = 		require('./routes/user/user.js');
-var http = 		require('http');
-var path = 		require('path');
+var express   = require('express');
+var routes    = require('./routes');
+var user 	  = require('./routes/user/user.js');
+var http 	  = require('http');
+var path 	  = require('path');
 
 var app = express();
 
