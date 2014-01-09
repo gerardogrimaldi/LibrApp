@@ -2,13 +2,13 @@
 
 <div class="container" ng-controller="UserCreateCtrl">
 
-  <form class="form-signin" role="form">
+  <form ng-submit="createUser()" class="form-signin" role="form">
     <h2 class="form-signin-heading">Create User:</h2>
-    <input type="text" class="form-control" placeholder="Name" required autofocus>
+    <input type="text" class="form-control" ng-model="user.name" placeholder="Name" required autofocus>
     <br/>
-    <input type="email" class="form-control" placeholder="Email address" required>
+    <input type="email" class="form-control" ng-model="user.email" placeholder="Email address" required>
     <br/>
-    <input type="password" class="form-control" placeholder="Password" required>
+    <input type="password" class="form-control" ng-model="user.password" placeholder="Password" required>
     <br/>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Create</button>
   </form>

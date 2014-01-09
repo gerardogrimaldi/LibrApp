@@ -135,6 +135,11 @@ module.exports = function (grunt) {
         }]
       }
     },
+
+    
+
+    
+
     // Renames files for browser caching purposes
     rev: {
       dist: {
@@ -361,9 +366,4 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
-  
-  grunt.registerTask('apiserver', 'Start Api server.', function() {
-    var done = this.async();
-    require('./server/app.js');
-  });
 };
