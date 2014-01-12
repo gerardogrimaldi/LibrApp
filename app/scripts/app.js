@@ -4,13 +4,17 @@ var app = angular.module('LibrApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'smartTable.table'
 ])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
+      
       .when('/',            {templateUrl: 'views/main.html',        controller: 'MainCtrl'})
+      .when('/navbar',      {templateUrl: 'views/navbar.html',      controller: 'MainCtrl'})
       .when('/user',        {templateUrl: 'views/user/index.html',  controller: 'LoginCtrl'})
       .when('/user/create', {templateUrl: 'views/user/create.html', controller: 'UserCreateCtrl'})
+      .when('/users',       {templateUrl: 'views/user/grid.html',   controller: 'UserShowCtrl'})
       .otherwise({redirectTo: '/'});
     //$locationProvider.html5Mode(true);
   }]);

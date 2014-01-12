@@ -27,9 +27,13 @@
       <script src="bower_components/es5-shim/es5-shim.js"></script>
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div class="container">
+      <div id="navbar" ng-controller="MainCtrl">
+        <div ng-include src="'views/partials/navbar.html'"></div>
+      </div>
+      <div ng-view=""></div>
+    </div> <!-- /container -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -48,6 +52,7 @@
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/smart-table/smart-table.debug.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -56,6 +61,8 @@
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/user/index.js"></script>
     <script src="scripts/controllers/user/create.js"></script>
+    <script src="scripts/controllers/user/grid.js"></script>
+
 
     <script src="http://code.jquery.com/jquery-1.11.0-beta3.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
