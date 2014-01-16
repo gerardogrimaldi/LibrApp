@@ -2,7 +2,7 @@
 
 angular.module('LibrApp').controller('LoginCtrl', function ($scope, $http) {
 
-  $http({method: 'GET', url: 'http://127.0.0.1:3000/api/user/'}).
+  $http({method: 'GET', url: '/api/user/'}).
     success(function(data, status, headers, config) {
       // this callback will be called asynchronously
       // when the response is available

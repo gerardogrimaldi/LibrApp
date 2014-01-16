@@ -5,7 +5,7 @@ var app = angular.module('LibrApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'smartTable.table'
+  'ngGrid'
 ])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
@@ -14,7 +14,7 @@ var app = angular.module('LibrApp', [
       .when('/navbar',      {templateUrl: 'views/navbar.html',      controller: 'MainCtrl'})
       .when('/user',        {templateUrl: 'views/user/index.html',  controller: 'LoginCtrl'})
       .when('/user/create', {templateUrl: 'views/user/create.html', controller: 'UserCreateCtrl'})
-      .when('/users',       {templateUrl: 'views/user/grid.html',   controller: 'UserShowCtrl'})
+      .when('/users',       {templateUrl: 'views/user/show.html',   controller: 'UserShowCtrl'})
       .otherwise({redirectTo: '/'});
     //$locationProvider.html5Mode(true);
   }]);
