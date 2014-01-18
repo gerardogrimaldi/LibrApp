@@ -5,11 +5,11 @@ var app = angular.module('LibrApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ngGrid'
+  'ngGrid',
+  'ui.bootstrap'
 ])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
-      
       .when('/',            {templateUrl: 'views/main.html',        controller: 'MainCtrl'})
       .when('/navbar',      {templateUrl: 'views/navbar.html',      controller: 'MainCtrl'})
       .when('/user',        {templateUrl: 'views/user/index.html',  controller: 'LoginCtrl'})

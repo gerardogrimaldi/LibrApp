@@ -19,7 +19,10 @@ angular.module('LibrApp').controller('UserShowCtrl', function ($scope, $http) {
         data: 'model',
         columnDefs: [
         {field:'name', displayName:'Name'}, 
-        {field:'email', displayName:'E-mail'}
-        ]
+        {field:'email', displayName:'E-mail'},
+        {displayName: 'Edit', cellTemplate: '<button id="editBtn" type="button" class="btn btn-primary" ng-click="editTeam(row.entity)" >Edit</button> '},
+      {displayName: 'Delete', cellTemplate: '<button id="deleteBtn" type="button" class="btn btn-primary" ng-click="deleteTeam(row.entity)" >Delete</button> '}
+        ],
+        
     };
 });
