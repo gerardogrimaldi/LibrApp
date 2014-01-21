@@ -6,6 +6,7 @@ var app = angular.module('LibrApp', [
   'ngSanitize',
   'ngRoute',
   'ngGrid',
+  'ui.states',
   'ui.bootstrap'
 ])
   .config(['$routeProvider', function($routeProvider) {
