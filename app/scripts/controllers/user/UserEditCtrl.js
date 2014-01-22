@@ -1,16 +1,20 @@
-
-/**
- * We define a controller for the edit action
- */
-.controller('ClubEditCtrl', function ClubEditController($scope, ClubRes, dialog, user) {
+app.controller('UserEditCtrl', function ($scope, $modalInstance, user) {
+ // $scope.user = user;
+ //  $scope.submit = function() {
+ //    $scope.user.$update(function(data) {
+ //                            dialog.close($scope.user);      
+ //                          });
+ //   };
+ //  $scope.cancel = function() {
+ //    dialog.close('cancel');
+ //  };
   $scope.user = user;
-  $scope.submit = function() {
-    $scope.user.$update(function(data) {
-                            dialog.close($scope.user);      
-                          });
-   };
 
-  $scope.cancel = function() {
+  $scope.ok = function () {
+    $modalInstance.close();
+  };
+
+  $scope.cancel = function () {
     dialog.close('cancel');
   };
-})
+});

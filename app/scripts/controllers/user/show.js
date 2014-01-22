@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('LibrApp').controller('UserShowCtrl', function ($scope, $http, dialog) {
+angular.module('LibrApp').controller('UserShowCtrl', function ($scope, $http, $modal) {
 
     $scope.queryUsers = function() {
         $http({method: 'GET', data : JSON.stringify($scope.user), url: 'https://librappapiserver1-c9-gerardogrimaldi.c9.io/api/users/' }).//'http://api.gerardogrimaldi.com/api/user/create/'}).
@@ -16,14 +16,16 @@ angular.module('LibrApp').controller('UserShowCtrl', function ($scope, $http, di
     $scope.queryUsers();
 
     $scope.editUser = function(user) {
-
-        $scope.myDialog = $dialog.dialog({dialogFade: false, resolve: {user: function(){return angular.copy(user);}}});
-        $scope.myDialog.open('/views/partials/user_edit.tpl.html', 'UserEditCtrl').then(function(result){
-            if (result === 'cancel'){}
-            else {
-                 $scope.queryUsers();
-            }
-        });  
+    
+    var modalInstance = $modal.open({
+        templateUrl: '/views/partials/user_edit.tpl.html',
+        controller: 'UserEditCtrl',
+        resolve: {
+          user: function () {
+            return $scope.details;
+          }
+        }
+      });  
     };
     $scope.gridOptions = { 
         data: 'users',
@@ -34,5 +36,9 @@ angular.module('LibrApp').controller('UserShowCtrl', function ($scope, $http, di
             {displayName: 'Delete', cellTemplate: '<button id="deleteBtn" type="button" class="btn btn-sm btn-primary" ng-click="delete(row.entity)" >Delete</button> '}
         ],
         multiSelect: false,
+        selectedItems: $scope.mySelections,
+        afterSelectionChange: function() {
+            $scope.user = $scope.mySelections;
+        }
     };
 });
