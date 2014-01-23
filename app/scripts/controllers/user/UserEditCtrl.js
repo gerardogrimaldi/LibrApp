@@ -1,20 +1,16 @@
-app.controller('UserEditCtrl', function ($scope, $modalInstance, user) {
- // $scope.user = user;
- //  $scope.submit = function() {
- //    $scope.user.$update(function(data) {
- //                            dialog.close($scope.user);      
- //                          });
- //   };
- //  $scope.cancel = function() {
- //    dialog.close('cancel');
- //  };
-  $scope.user = user;
+app.controller('UserEditCtrl', function ($scope, $modal, $user) {
+
+  $scope.items = user;
+
+  $scope.selected = {
+    item: $scope.items
+  };
 
   $scope.ok = function () {
-    $modalInstance.close();
+    $modalInstance.close($scope.selected.item);
   };
 
   $scope.cancel = function () {
-    dialog.close('cancel');
+    $modalInstance.dismiss('cancel');
   };
 });

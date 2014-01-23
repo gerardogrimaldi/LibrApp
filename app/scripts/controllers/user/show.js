@@ -3,7 +3,7 @@
 angular.module('LibrApp').controller('UserShowCtrl', function ($scope, $http, $modal) {
 
     $scope.queryUsers = function() {
-        $http({method: 'GET', data : JSON.stringify($scope.user), url: 'https://librappapiserver1-c9-gerardogrimaldi.c9.io/api/users/' }).//'http://api.gerardogrimaldi.com/api/user/create/'}).
+        $http({method: 'GET', data : JSON.stringify($scope.user),   url: 'https://librappapiserver1-c9-gerardogrimaldi.c9.io/api/users/' }).//'http://api.gerardogrimaldi.com/api/user/create/'}).
             success(function(data, status, headers, config) {
                 $scope.users = data.Users;
                 toastr.success("Cargando datos...");
@@ -16,17 +16,18 @@ angular.module('LibrApp').controller('UserShowCtrl', function ($scope, $http, $m
     $scope.queryUsers();
 
     $scope.editUser = function(user) {
-    
-    var modalInstance = $modal.open({
-        templateUrl: '/views/partials/user_edit.tpl.html',
-        controller: 'UserEditCtrl',
-        resolve: {
-          user: function () {
-            return $scope.details;
-          }
-        }
-      });  
-    };
+
+        var modalInstance = $modal.open({
+            templateUrl: 'views/partials/user_edit.tpl.html',
+            controller: 'UserEditCtrl',
+            resolve: {
+                user: function () {
+                    return $scope.user;
+                    }
+                }
+            });
+    }
+
     $scope.gridOptions = { 
         data: 'users',
         columnDefs: [
