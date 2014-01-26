@@ -16,7 +16,6 @@ angular.module('LibrApp').controller('UserShowCtrl', function ($scope, $http, $m
     $scope.queryUsers();
 
     $scope.editUser = function(user) {
-
         var modalInstance = $modal.open({
             templateUrl: 'views/partials/user_edit.tpl.html',
             controller: 'UserEditCtrl',
