@@ -1,8 +1,10 @@
 {
-  "name": "proyects",
-  "version": "0.0.0",
+  "name": "LibrApp",
+  "version": "0.1.0",
   "dependencies": {
-    "grunt": "~0.4.2"
+    "grunt": "~0.4.2",
+    "passport": "~0.2.0",
+    "karma": "~0.10.9"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
