@@ -6,9 +6,17 @@ angular.module('LibrApp')
 	  	on: 'click',
   	  	loading : 'loading',
       	title : 'Sign in',
-    	content  : '<div class="ui form segment" style="display: block;"><div class="field"><label>Email address</label><div class="ui left labeled icon input"><input type="text" placeholder="Email address"><i class="user icon"></i><div class="ui corner label"><i class="icon asterisk"></i></div>          </div>        </div>        <div class="field">          <label>Password</label>          <div class="ui left labeled icon input">            <input type="password" placeholder="Password" required>            <i class="lock icon"></i>            <div class="ui corner label">              <i class="icon asterisk"></i>            </div>          </div>        </div>      <div class="inline field">               </div>      <div ng-click="login()" class="ui blue small submit button">Sign in</div></div>'	 
+    	  content  : '<login></login>'	 
 	 });
 	$scope.login = function(){
-		alert("alert");
-	}
+    alert("alert");
+  };
+  })
+   .directive('login', function() {
+    return {
+      restrict: 'E',
+      transclude: true,
+      templateUrl: 'views/user/minlogin.html'
+    };
   });
+
