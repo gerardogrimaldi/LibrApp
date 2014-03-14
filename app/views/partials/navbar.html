@@ -1,36 +1,30 @@
  <!-- Static navbar -->
-  <div class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Gerardo Grimaldi</a>
+  <div class="ui page grid masthead segment">
+    <div class="column">
+      <div class="inverted secondary pointing ui menu">
+        <div class="header item">Grimaldi Gerardo</div>
+        <div class="right menu">
+          <div class="ui tiered secondary pointing menu">
+            <a class="active item" href="/#">
+              <i class="home icon"></i> Home
+            </a>
+            <!--a href="/#/user" class="ui item login"-->
+            <a href="#" class="ui item login">
+              <i class="user icon"></i>Login
+            </a>
+            <a href="/#/users" class="ui item">
+              <i class="users icon"></i>Users
+            </a>
+            <div class="right menu">
+              <div class="item">
+                <div class="ui icon input">
+                  <input type="text" placeholder="Search...">
+                  <i class="search link icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/#/user">Login</a></li>
-        <li><a href="/#/users">Users</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li class="dropdown-header">Nav header</li>
-            <li><a href="#">Separated link</a></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="./">Default</a></li>
-        <li><a href="../navbar-static-top/">Static top</a></li>
-        <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
   </div>

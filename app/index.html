@@ -6,6 +6,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
@@ -13,10 +15,14 @@
 
         <!-- build:css({.tmp,app}) styles/main.css -->
         <!--link rel="stylesheet" href="styles/main.css"-->
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+        <!--link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/-->
+        <link rel="stylesheet" type="text/css" href="../styles/semantic/packaged/css/semantic.css"/>
         <link rel="stylesheet" href="bower_components/toastr/toastr.min.css">
         <link rel="stylesheet" href="bower_components/ng-grid/ng-grid.min.css" rel="stylesheet" type="text/css"/>
-        <link href="styles/navbar.css" rel="stylesheet">
+        
+        <link rel="stylesheet" type="text/css" href="styles/semantic/examples/homepage.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+
         <!-- endbuild -->
 </head>
   <body ng-app="LibrApp">
@@ -49,10 +55,11 @@
     <script src="bower_components/angular/angular.js"></script>
 
     <!-- build:js scripts/modules.js -->
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    
     <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 
@@ -69,9 +76,11 @@
 
 
     <script src="http://code.jquery.com/jquery-1.11.0-beta3.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/toastr/toastr.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="styles/semantic/packaged/javascript/semantic.js"></script>
+    <script type="text/javascript" src="styles/semantic/examples/homepage.js"></script>
+    <!--script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script-->
 
     <script src="bower_components/ng-grid/build/ng-grid.debug.js"></script>
 
