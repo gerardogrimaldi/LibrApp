@@ -1,4 +1,4 @@
-app.controller('editModalCtrl', function ($scope, $http, $modalInstance, items) {
+app.controller('editModalCtrl', function ($scope, $http) {
   $scope.user = items;
   $scope.selected = {
     user: $scope.user[0]

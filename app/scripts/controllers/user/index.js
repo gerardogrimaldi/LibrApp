@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('LibrApp').controller('LoginCtrl', function ($scope, $http) {
-
-  $http({method: 'GET', url: '/api/user/'}).
-    success(function(data, status, headers, config) {
-      // this callback will be called asynchronously
-      // when the response is available
-      }).
-      error(function(data, status, headers, config) {
-      // called asynchronously if an error occurs
-      // or server returns response with an error status.
-    });
+angular.module('LibrApp').controller('IndexUserCtrl', function ($scope, $http, Restangular) {
+	var baseUsers = Restangular.all('users');
+	baseUsers.getList().then(function (users) {
+	
+		$scope.allUsers = users.users;
+	
+	}, function errorCallback() {
+  	
+  		alert("Oops error from server :(");
+	
+	})
 });

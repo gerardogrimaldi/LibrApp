@@ -7,19 +7,14 @@
 </style>
 
 <div class="ui grid">
-	
-	<div class="column"></div>
-  
-	<div ng-controller="UserCreateCtrl" class="fourteen wide column">
-	
-	<h2 class="ui dividing header">
-		Usuarios
-	</h2>
-  	
-  	<div ng-click="createUser()" class="circular ui blue small submit button">Crate</div>  
-	
-	<div class="gridStyle" ng-grid="gridOptions"></div>
 
+	<div class="column"></div>
+
+	<div ng-controller="UserCreateCtrl" class="fourteen wide column">
+	<h2 class="ui dividing header">
+		Usuarios <div ng-click="createUser()" class="circular ui blue small submit button">Crate</div>  
+	</h2>
+	<div class="gridStyle" ng-grid="gridOptions"></div>
 	<div class="column"></div>
 
 </div>

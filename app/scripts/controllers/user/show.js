@@ -1,6 +1,6 @@
-'use strict';
+/*'use strict';
 
-angular.module('LibrApp').controller('UserShowCtrl', function ($scope, $http, $modal, $location) {
+angular.module('LibrApp').controller('UserShowCtrl', function ($scope, $http, $location) {
 
     $scope.queryUsers = function() {
         $http({method: 'GET', data : JSON.stringify($scope.user),   url: 'https://librappapiserver-c9-gerardogrimaldi.c9.io/api/users/' }).//'http://api.gerardogrimaldi.com/api/user/create/'}).
@@ -32,7 +32,7 @@ angular.module('LibrApp').controller('UserShowCtrl', function ($scope, $http, $m
     };
 
     $scope.deleteUser = function(user){
-        $http({method: 'DELETE'/*, data : user*/, url: 'https://librappapiserver-c9-gerardogrimaldi.c9.io/api/user/' + user._id }).//'http://api.gerardogrimaldi.com/api/user/create/'}).
+        $http({method: 'DELETE', data : user, url: 'https://librappapiserver-c9-gerardogrimaldi.c9.io/api/user/' + user._id }).//'http://api.gerardogrimaldi.com/api/user/create/'}).
             success(function(data, status, headers, config) {
                 toastr.success("Borrado usuario " + user.name + ".");
                 $scope.queryUsers();
@@ -54,3 +54,4 @@ angular.module('LibrApp').controller('UserShowCtrl', function ($scope, $http, $m
         multiSelect: false,
     };
 });
+*/

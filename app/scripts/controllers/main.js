@@ -2,21 +2,21 @@
 
 angular.module('LibrApp')
   .controller('MainCtrl', function ($scope) {
-  	$('.login').popup({
+  	/*$('.login').popup({
 	  	on: 'click',
   	  	loading : 'loading',
       	title : 'Sign in',
-    	  content  : '<login></login>'	 
+    	  content  : "<login></login>"
 	 });
 	$scope.login = function(){
     alert("alert");
-  };
+  };*/
   })
    .directive('login', function() {
     return {
       restrict: 'E',
       transclude: true,
-      templateUrl: 'views/user/minlogin.html'
+      templateUrl: 'scripts/controllers/minlogin.html'
     };
   });
 
