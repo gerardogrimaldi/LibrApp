@@ -9,14 +9,16 @@ var app = angular.module('LibrApp', [
   //,'ui.bootstrap'
   ,'restangular'
 ])
-  .config(['$routeProvider', function($routeProvider) {
+  .config(['$routeProvider','$stateProvider', function($routeProvider,$stateProvider) {
     $routeProvider
-      .when('/',            {templateUrl: 'views/main.html',        controller: 'MainCtrl'})
-      .when('/navbar',      {templateUrl: 'views/navbar.html',      controller: 'MainCtrl'})
-      .when('/user',        {templateUrl: 'views/user/index.html',  controller: 'IndexUserCtrl'})
+      .when('/',              {templateUrl: 'views/main.html',        controller: 'MainCtrl'})
+      .when('/navbar',        {templateUrl: 'views/navbar.html',      controller: 'MainCtrl'})
+      .when('/users',         {templateUrl: 'views/user/show.html',   controller: 'UserShowCtrl'})
+      .when('/user/login',    {templateUrl: 'views/user/login.html',  controller: 'IndexUserCtrl'})
+      .when('/user/register', {templateUrl: 'views/user/create.html',  controller: 'IndexUserCtrl'})
       //.when('/user/create', {templateUrl: 'views/user/create.html', controller: 'UserCreateCtrl'})
-      //.when('/users',       {templateUrl: 'views/user/show.html',   controller: 'UserShowCtrl'})
-      .otherwise({redirectTo: '/'});
+      
+      .otherwise({redirectTo: '/404'});
     //$locationProvider.html5Mode(true);
   }]);
 
