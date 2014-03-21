@@ -34,7 +34,20 @@ app.config(['$httpProvider', function($httpProvider) {
 app.config(function(RestangularProvider) {
   RestangularProvider.setBaseUrl('https://libraps-c9-gerardogrimaldi.c9.io/api');
   //RestangularProvider.setBaseUrl('http://api.gerardogrimaldi.com/api');
+
+  RestangularProvider.setDefaultHttpFields({cache: true});
+  //RestangularProvider.setMethodOverriders(["put", "patch"]);
+
+  // In this case we are mapping the id of each element to the _id field.
+  // We also change the Restangular route. 
+  // The default value for parentResource remains the same.
+  RestangularProvider.setRestangularFields({
+    id: "_id",
+    route: "restangularRoute",
+    selfLink: "self.href"
+  });
 });
+
 
 //Ejemplo de injeccion restangular 
 // Here it injects Restangular by itself
